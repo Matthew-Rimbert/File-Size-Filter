@@ -1,0 +1,83 @@
+#Filename:      w5_matthew_rimbert.py
+# Description:  This script provides a list of files within a specified 
+#               root folder and its subfolders based on size conditions.
+# Author:       Matthew Rimbert
+# Class:        ENTD261 / Scripting Languages for the Administrator
+# Date:         February 3, 2024
+# Overview:     This script validates input parameters, iterates through files in the specified directory hierarchy, 
+#               and prints details (filename, size, creation date) for files that meet the specified size condition.
+#
+#Instructions: 
+# 1. Ensure Python is installed on your system, and the 'python' command is available in your terminal or command prompt.
+# 2. Save the provided Python script with the filename 'w5_matthew_rimbert.py'.
+# 3. Open a terminal or command prompt and navigate to the directory where you saved the script.
+# 4. Run the script with the following command:
+#    ```
+#    python w5_matthew_rimbert.py
+#    ```
+# 5. The script will prompt you to enter the root folder path. Provide the path and press Enter.
+# 6. Enter the size operator when prompted ('=', '>', or '<') and press Enter.
+# 7. Enter the target size when prompted and press Enter.
+# 8. The script will then analyze the specified directory, printing details for files that meet the size condition.
+#
+# Example:
+#    ```
+#    Enter the root folder path: /path/to/root/folder
+#    Enter the size operator ('=', '>', or '<'): >
+#    Enter the target size: 1000
+#    ```
+# 9. Review the output as necessary.
+#
+# Note: Replace '/path/to/root/folder' with the actual path of the folder you want to analyze.
+#-------------------------------------------------------------------------------------------------------------------#
+import os
+from datetime import datetime
+
+def list_files():
+    try:
+        # Get user input for root folder
+        root_folder = input("Enter the root folder path: ")
+        
+        # Validate root folder
+        if not os.path.exists(root_folder) or not os.path.isdir(root_folder):
+            raise ValueError("Invalid root folder. Please provide a valid folder path.")
+
+        # Get user input for size operator
+        size_operator = input("Enter the size operator ('=', '>', or '<'): ")
+
+        # Validate size operator
+        if size_operator not in ['=', '>', '<']:
+            raise ValueError("Invalid size operator. Use '=', '>', or '<'.")
+
+        # Get user input for target size
+        target_size_str = input("Enter the target size: ")
+
+        # Validate target size
+        if not target_size_str.isdigit():
+            raise ValueError("Invalid target size. Please provide a valid numerical value.")
+
+        # Convert target size to bytes
+        target_size = int(target_size_str)
+
+        # Loop through all files in the root folder and its subfolders
+        for foldername, subfolders, filenames in os.walk(root_folder):
+            for filename in filenames:
+                file_path = os.path.join(foldername, filename)
+                file_size = os.path.getsize(file_path)
+
+                # Apply size filter
+                if (size_operator == '=' and file_size == target_size) or \
+                   (size_operator == '>' and file_size > target_size) or \
+                   (size_operator == '<' and file_size < target_size):
+                    # Get file creation date
+                    creation_time = os.path.getctime(file_path)
+                    creation_date = datetime.fromtimestamp(creation_time).strftime('%Y-%m-%d %H:%M:%S')
+
+                    # Print file information
+                    print(f"File: {filename}, Size: {file_size} bytes, Created on: {creation_date}")
+    # Handle exceptions and print error message
+    except Exception as e:
+        print(f"Error: {str(e)}")
+
+if __name__ == "__main__":
+    list_files()

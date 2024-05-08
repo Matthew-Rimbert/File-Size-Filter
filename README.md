@@ -54,11 +54,15 @@ Enter the target size (in bytes): 1000
 This will display files in the specified directory that are greater than 1000 bytes, along with their names, sizes, and creation dates.
 
 #### Download it for Yourself!
-Download - (https://github.com/Matthew-Rimbert/File-Size-Finder/blob/main/w5_matthew_rimbert.py)
+
+[Download the Python Script](https://github.com/Matthew-Rimbert/File-Size-Finder/raw/main/w5_matthew_rimbert.py) - Click to download the `w5_matthew_rimbert.py` directly.
+
 #### Check out the Plain Text
-Pain Text of Script - [https://github.com/Matthew-Rimbert/VBScript-Calculator/blob/main/w2_matthew_rimbert.txt
-](https://github.com/Matthew-Rimbert/File-Size-Finder/blob/main/w5_matthew_rimbert.txt)
-![File_Size_Finder_Script](https://github.com/Matthew-Rimbert/File-Size-Finder/assets/169205418/f4ec112e-b0a5-448d-924e-7eab6654439d)
+
+[Plain Text of Script](https://github.com/Matthew-Rimbert/File-Size-Finder/raw/main/w5_matthew_rimbert.txt) - View the plain text version of the script.
+
+![File Size Finder Script](https://github.com/Matthew-Rimbert/File-Size-Finder/assets/169205418/f4ec112e-b0a5-448d-924e-7eab6654439d)
+
 
 
 

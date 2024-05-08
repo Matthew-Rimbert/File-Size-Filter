@@ -53,7 +53,7 @@ Enter the target size (in bytes): 1000
 ```
 This will display files in the specified directory that are greater than 1000 bytes, along with their names, sizes, and creation dates.
 
-You can copy and paste this directly into your README.md to provide clear instructions and an example of how to use your script.
+![File_Size_Finder_Script](https://github.com/Matthew-Rimbert/File-Size-Finder/assets/169205418/f4ec112e-b0a5-448d-924e-7eab6654439d)
 
 
 

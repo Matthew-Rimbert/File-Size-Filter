@@ -22,12 +22,12 @@ Clone this repository to your local machine using:
 git clone https://github.com/yourusername/file-size-finder.git
 ```
 ### Usage
-1. Open your terminal or command prompt.
+1. **Open** your terminal or command prompt.
 2. Navigate to the directory containing the script. If you cloned the repository, it might look something like this:
 ```bash
 cd path/to/file-size-finder
 ```
-3. Run the script using the Python interpreter. You can start the script with the following command:
+3. **Run** the script using the Python interpreter. You can start the script with the following command:
 ```bash
 python w5_matthew_rimbert.py
 ```

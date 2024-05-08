@@ -1,4 +1,4 @@
-# File Size Finder
+# File Size Filter
 
 This Python script provides a utility to list files within a specified root folder and its subfolders based on size conditions, making it easy to manage and analyze file storage.
 
